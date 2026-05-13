@@ -1,468 +1,449 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sajan Vaidhyanathan — Revenue & Marketing Operations Leader</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="Sajan Vaidhyanathan — Revenue and Marketing Operations Leader. Building agentic GTM systems. Powered 7x ARR growth at Kibo.">
+  <title>Sajan Vaidhyanathan — Revenue &amp; Marketing Operations Leader</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            bg:        '#08090A',
-            surface:   '#101113',
-            's2':      '#16181C',
-            accent:    '#5E6AD2',
-            'accent-h':'#7B86E0',
-            muted:     '#8A8F98',
-            success:   '#4CB782',
-            primary:   '#E6E6E6',
-          },
-          fontFamily: { sans: ['Inter', 'sans-serif'] },
-          maxWidth:   { container: '1200px' },
-        }
-      }
-    }
-  </script>
-  <style>
-    body { background-color: #08090A; }
-    @keyframes blink  { 0%,100%{opacity:1} 50%{opacity:.4} }
-    @keyframes fadein { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
-    .blink            { animation: blink 2.4s ease-in-out infinite; }
-    .fade-in          { animation: fadein .6s cubic-bezier(.16,1,.3,1) both; }
-    .word-fade        { transition: opacity 300ms cubic-bezier(.16,1,.3,1); }
-    .card-hover       { transition: border-color 200ms cubic-bezier(.16,1,.3,1), transform 200ms cubic-bezier(.16,1,.3,1); }
-    .card-hover:hover { border-color: rgba(255,255,255,.16) !important; transform: translateY(-2px); }
-    .btn-hover        { transition: background 200ms cubic-bezier(.16,1,.3,1), transform 200ms cubic-bezier(.16,1,.3,1); }
-    .btn-hover:hover  { transform: translateY(-2px); }
-    ::-webkit-scrollbar { width: 5px; }
-    ::-webkit-scrollbar-track { background: #08090A; }
-    ::-webkit-scrollbar-thumb { background: #5E6AD2; border-radius: 3px; }
-    .hero-bg {
-      background:
-        radial-gradient(at 20% 30%, rgba(94,106,210,.15) 0%, transparent 50%),
-        radial-gradient(at 80% 70%, rgba(94,106,210,.10) 0%, transparent 50%),
-        #08090A;
-    }
-    .contact-bg {
-      background:
-        radial-gradient(at 50% 0%, rgba(94,106,210,.12) 0%, transparent 60%),
-        #08090A;
-    }
-    .metric-card { background: #101113; transition: background 200ms cubic-bezier(.16,1,.3,1); }
-    .metric-card:hover { background: #16181C; }
-    .pill { transition: color 200ms cubic-bezier(.16,1,.3,1), border-color 200ms cubic-bezier(.16,1,.3,1); }
-    .pill:hover { color: #E6E6E6; border-color: rgba(255,255,255,.16); }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles-base.css">
+  <link rel="stylesheet" href="styles-linear-dark.css">
+  <link rel="stylesheet" href="styles-vercel-minimal.css">
 </head>
-<body class="font-sans text-primary antialiased">
+<body>
 
-<!-- ============================================================ -->
-<!--  NAV                                                         -->
-<!-- ============================================================ -->
-<header class="fixed top-0 left-0 right-0 z-50 h-[72px] flex items-center border-b border-white/[0.08]"
-        style="background:rgba(8,9,10,0.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)">
-  <div class="max-w-container mx-auto w-full px-12 md:px-6 flex items-center justify-between">
-    <a href="#hero" class="text-[16px] font-bold tracking-tight text-primary no-underline">
-      Sajan<span class="text-accent">V.</span>
-    </a>
-    <!-- Desktop links -->
-    <nav class="hidden md:flex items-center gap-1" aria-label="Main navigation">
-      <a href="#capabilities"  class="text-[14px] font-medium text-muted px-4 py-2 rounded-md hover:text-primary hover:bg-white/5 transition-all duration-200">Capabilities</a>
-      <a href="#case-studies"  class="text-[14px] font-medium text-muted px-4 py-2 rounded-md hover:text-primary hover:bg-white/5 transition-all duration-200">Case Studies</a>
-      <a href="#about"         class="text-[14px] font-medium text-muted px-4 py-2 rounded-md hover:text-primary hover:bg-white/5 transition-all duration-200">About</a>
-      <a href="#contact"       class="text-[14px] font-medium text-muted px-4 py-2 rounded-md hover:text-primary hover:bg-white/5 transition-all duration-200">Contact</a>
-      <a href="mailto:ssajan.is@gmail.com"
-         class="ml-2 text-[14px] font-semibold text-white bg-accent px-5 py-2 rounded-lg btn-hover shadow-sm">
-        Email me
-      </a>
+<!-- ============================================================
+     NAVBAR
+     ============================================================ -->
+<header id="navbar">
+  <div class="container">
+    <a class="nav-logo" href="#hero">Sajan<span class="accent">V.</span></a>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#case-studies">Case Studies</a>
+      <a href="#experience">Experience</a>
+      <a href="#tech-stack">Tech Stack</a>
+      <a href="#certifications">Certs</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <!-- Hamburger -->
-    <button id="ham" class="md:hidden flex flex-col gap-[5px] p-1 bg-transparent border-0 cursor-pointer" aria-label="Open menu">
-      <span class="block w-[22px] h-[2px] bg-primary rounded"></span>
-      <span class="block w-[22px] h-[2px] bg-primary rounded"></span>
-      <span class="block w-[22px] h-[2px] bg-primary rounded"></span>
+
+    <div class="nav-right">
+      <button id="theme-toggle" aria-label="Switch theme">
+        <!-- Sun icon (shown in dark mode) -->
+        <svg id="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+        </svg>
+        <!-- Moon icon (shown in light mode) -->
+        <svg id="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:none">
+          <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/>
+        </svg>
+      </button>
+      <a class="nav-cta" href="mailto:ssajan.is@gmail.com">Email me</a>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Open navigation menu">
+      <span></span><span></span><span></span>
     </button>
   </div>
 </header>
 
-<!-- Mobile drawer -->
-<div id="mobile-menu" class="hidden fixed top-[72px] left-0 right-0 z-40 bg-surface border-b border-white/[0.08] flex-col px-6 py-5 gap-1">
-  <a href="#capabilities" class="text-[16px] font-medium text-muted py-3 border-b border-white/[0.08] hover:text-primary transition-colors">Capabilities</a>
-  <a href="#case-studies"  class="text-[16px] font-medium text-muted py-3 border-b border-white/[0.08] hover:text-primary transition-colors">Case Studies</a>
-  <a href="#about"         class="text-[16px] font-medium text-muted py-3 border-b border-white/[0.08] hover:text-primary transition-colors">About</a>
-  <a href="#contact"       class="text-[16px] font-medium text-muted py-3 border-b border-white/[0.08] hover:text-primary transition-colors">Contact</a>
-  <a href="mailto:ssajan.is@gmail.com" class="mt-3 text-center text-[15px] font-semibold text-white bg-accent py-3 rounded-lg">Email me</a>
+<!-- Mobile menu -->
+<div id="mobile-menu" aria-label="Mobile navigation">
+  <a href="#case-studies">Case Studies</a>
+  <a href="#experience">Experience</a>
+  <a href="#tech-stack">Tech Stack</a>
+  <a href="#certifications">Certs</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+  <a class="nav-cta" href="mailto:ssajan.is@gmail.com">Email me</a>
 </div>
 
-<!-- ============================================================ -->
-<!--  HERO                                                        -->
-<!-- ============================================================ -->
-<section id="hero" class="hero-bg min-h-screen flex items-center pt-[72px]">
-  <div class="max-w-container mx-auto w-full px-12 md:px-6 py-24 md:py-16">
 
-    <!-- Availability pill -->
-    <div class="inline-flex items-center gap-2 px-4 py-[6px] rounded-full border mb-10 fade-in"
-         style="background:rgba(76,183,130,.1);border-color:rgba(76,183,130,.25)">
-      <span class="w-2 h-2 rounded-full bg-success blink" aria-hidden="true"></span>
-      <span class="text-[13px] font-medium text-success tracking-[0.04em] uppercase">Open to opportunities</span>
-    </div>
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="hero" style="padding-top: calc(64px + 80px);">
+  <div class="container">
+    <div class="hero-inner">
 
-    <h1 class="text-[64px] md:text-[40px] sm:text-[34px] font-bold tracking-[-0.03em] leading-[1.05] text-primary mb-4 fade-in">
-      Sajan Vaidhyanathan
-    </h1>
-
-    <p class="text-[22px] md:text-[18px] font-medium text-muted tracking-tight mb-8 fade-in">
-      Revenue &amp; Marketing Operations Leader
-    </p>
-
-    <!-- Rotating tagline -->
-    <div class="flex items-center gap-3 flex-wrap text-[32px] md:text-[24px] font-semibold tracking-[-0.02em] mb-9 min-h-[48px] fade-in">
-      <span class="text-primary">I build</span>
-      <span id="rotating-word" class="text-accent word-fade"></span>
-    </div>
-
-    <p class="text-[18px] md:text-[16px] text-muted leading-[1.7] max-w-[600px] mb-14 fade-in">
-      PhD in Marketing Analytics. I've scaled GTM systems from $6M to $43M ARR by treating revenue operations as a product, not a back-office function.
-    </p>
-
-    <div class="flex gap-4 flex-wrap fade-in">
-      <a href="mailto:ssajan.is@gmail.com"
-         class="inline-flex items-center gap-3 bg-accent text-white text-[16px] font-semibold px-7 py-4 rounded-lg btn-hover shadow-sm">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-        Email me
-      </a>
-      <a href="#case-studies"
-         class="inline-flex items-center gap-3 bg-transparent text-primary text-[16px] font-medium px-7 py-4 rounded-lg border border-white/[0.08] btn-hover">
-        View case studies
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-      </a>
-    </div>
-
-  </div>
-</section>
-
-<!-- ============================================================ -->
-<!--  METRICS                                                     -->
-<!-- ============================================================ -->
-<section id="metrics" class="border-t border-b border-white/[0.08] py-16 px-12 md:px-6">
-  <div class="max-w-container mx-auto">
-    <div id="metrics-grid"
-         class="grid grid-cols-4 lg:grid-cols-2 sm:grid-cols-1 divide-x divide-y divide-white/[0.08] border border-white/[0.08] rounded-xl overflow-hidden">
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================ -->
-<!--  CAPABILITIES                                                -->
-<!-- ============================================================ -->
-<section id="capabilities" class="py-24 md:py-16 px-12 md:px-6 bg-bg">
-  <div class="max-w-container mx-auto">
-    <p class="text-[13px] font-medium text-accent tracking-[0.06em] uppercase mb-4">What I do</p>
-    <h2 class="text-[40px] md:text-[28px] font-bold tracking-[-0.025em] text-primary mb-3">
-      Revenue as a product,<br>not a back-office function.
-    </h2>
-    <p class="text-[18px] md:text-[16px] text-muted leading-relaxed max-w-[560px] mb-14">
-      I build the systems, tools, and infrastructure that turn pipeline signals into predictable growth.
-    </p>
-    <div id="cap-grid" class="grid grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-4"></div>
-  </div>
-</section>
-
-<!-- ============================================================ -->
-<!--  CASE STUDIES                                                -->
-<!-- ============================================================ -->
-<section id="case-studies" class="py-24 md:py-16 px-12 md:px-6" style="background:#08090A">
-  <div class="max-w-container mx-auto">
-    <p class="text-[13px] font-medium text-accent tracking-[0.06em] uppercase mb-4">Case Studies</p>
-    <h2 class="text-[40px] md:text-[28px] font-bold tracking-[-0.025em] text-primary mb-3">Work that moved numbers.</h2>
-    <p class="text-[18px] md:text-[16px] text-muted leading-relaxed max-w-[560px] mb-14">
-      Seven projects. Real results. Here's what actually happened.
-    </p>
-
-    <!-- Featured -->
-    <div class="bg-surface border border-white/[0.08] rounded-xl p-12 md:p-8 mb-6 grid grid-cols-2 md:grid-cols-1 gap-12 md:gap-8 items-center card-hover">
-      <div>
-        <span class="inline-block text-[11px] font-semibold tracking-[0.06em] uppercase text-accent bg-accent/10 border border-accent/20 rounded-full px-3 py-1 mb-5">Headline Achievement</span>
-        <h3 class="text-[28px] md:text-[22px] font-bold tracking-[-0.02em] text-primary leading-tight mb-4">Scaling Kibo from $6M to $43M ARR</h3>
-        <p class="text-[16px] text-muted leading-[1.7]">
-          When I joined Kibo, the GTM machine was held together with spreadsheets and good intentions. Over two years, I rebuilt it from the ground up — demand generation, data infrastructure, forecasting, campaign automation, and full-funnel analytics. The result was a 7× jump in ARR. Revenue operations treated as a product, not an afterthought.
-        </p>
-      </div>
-      <div class="bg-s2 border border-white/[0.08] rounded-xl p-10 text-center">
-        <div class="text-[56px] md:text-[44px] font-bold tracking-[-0.04em] text-primary leading-none">$43<span class="text-accent">M</span></div>
-        <div class="text-[15px] font-medium text-muted mt-3">ARR — from $6M in 2 years</div>
-      </div>
-    </div>
-
-    <!-- Cards -->
-    <div id="cs-grid" class="grid grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-4"></div>
-  </div>
-</section>
-
-<!-- ============================================================ -->
-<!--  ABOUT + TECH STACK                                         -->
-<!-- ============================================================ -->
-<section id="about" class="py-24 md:py-16 px-12 md:px-6 bg-bg">
-  <div class="max-w-container mx-auto">
-    <p class="text-[13px] font-medium text-accent tracking-[0.06em] uppercase mb-4">About</p>
-    <h2 class="text-[40px] md:text-[28px] font-bold tracking-[-0.025em] text-primary mb-14">The person behind the systems.</h2>
-
-    <!-- About grid -->
-    <div class="grid grid-cols-[380px_1fr] lg:grid-cols-[280px_1fr] md:grid-cols-1 gap-16 md:gap-10 mb-20 items-start">
-
-      <!-- Photo -->
-      <div class="relative md:max-w-[320px]">
-        <img src="headshot.png"
-             alt="Sajan Vaidhyanathan"
-             class="w-full rounded-2xl border border-white/[0.08] object-cover object-top"
-             style="aspect-ratio:3/4">
-        <div class="absolute bottom-5 left-5 rounded-xl border border-white/[0.08] px-4 py-3"
-             style="background:rgba(8,9,10,.85);backdrop-filter:blur(8px)">
-          <div class="text-[14px] font-semibold text-primary">Kibo</div>
-          <div class="text-[12px] text-muted mt-[2px]">Sr. Manager, RevOps &amp; MarketingOps</div>
-        </div>
+      <!-- Status pill -->
+      <div class="status-pill" style="margin-bottom:32px; display:inline-flex;">
+        <span class="blink" style="width:8px;height:8px;border-radius:50%;background:currentColor;flex-shrink:0;" aria-hidden="true"></span>
+        Open to RevOps leadership roles
       </div>
 
-      <!-- Bio -->
-      <div class="flex flex-col gap-6">
-        <h3 class="text-[28px] md:text-[22px] font-bold tracking-[-0.02em] text-primary leading-tight">
-          I've spent my career asking one question: what does it actually take to make revenue predictable?
-        </h3>
-        <p class="text-[16px] text-muted leading-[1.75]">
-          I'm Sajan. I started in marketing — segmentation, email, campaigns. Then I got curious about why some campaigns converted and others didn't. That curiosity pulled me deeper into data, then into systems, then into the full revenue engine.
-        </p>
-        <p class="text-[16px] text-muted leading-[1.75]">
-          At Kibo, I built the GTM machine from scratch. When I joined, we were at $6M ARR. Two years later, we crossed $43M. That wasn't magic — it was careful plumbing: intent signal monitoring, a proper LTV calculator, a 3M+ contact database kept clean, and 30+ dashboards that let every team answer their own questions.
-        </p>
-        <p class="text-[16px] text-muted leading-[1.75]">
-          I'm finishing a PhD in Marketing Analytics at SRM University. When I'm not building systems, I'm usually asking why a number moved — and not stopping until I have a real answer.
-        </p>
-        <div class="flex flex-col gap-3 mt-2">
-          <div class="flex items-start gap-3">
-            <span class="w-[6px] h-[6px] rounded-full bg-accent flex-shrink-0 mt-[7px]"></span>
-            <span class="text-[15px] text-muted"><strong class="text-primary font-semibold">PhD in Marketing Analytics</strong> — SRM University, 2026 (in progress)</span>
-          </div>
-          <div class="flex items-start gap-3">
-            <span class="w-[6px] h-[6px] rounded-full bg-accent flex-shrink-0 mt-[7px]"></span>
-            <span class="text-[15px] text-muted"><strong class="text-primary font-semibold">MBA — Marketing &amp; Operations</strong> — 2017</span>
-          </div>
-          <div class="flex items-start gap-3">
-            <span class="w-[6px] h-[6px] rounded-full bg-accent flex-shrink-0 mt-[7px]"></span>
-            <span class="text-[15px] text-muted"><strong class="text-primary font-semibold">20+ tool stack</strong> — HubSpot · Salesforce · Marketo · 6Sense · Tableau · Snowflake and more</span>
-          </div>
-        </div>
+      <!-- Meta row (Vercel Minimal only) -->
+      <div class="hero-meta-row" style="margin-bottom:16px;">Chennai, India &middot; UTC+5:30 &middot; Currently at Kibo</div>
+
+      <!-- Name -->
+      <h1 class="hero-name" style="margin-bottom:14px;" id="hero-name">Sajan Vaidhyanathan</h1>
+
+      <!-- Role -->
+      <p class="hero-role" style="margin-bottom:24px;" id="hero-role">Revenue &amp; Marketing Operations Leader</p>
+
+      <!-- Rotating tagline -->
+      <div class="hero-tagline" style="margin-bottom:28px; min-height:1.4em; display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+        <span>I'm building</span>
+        <span class="word word-fade" id="rotating-word" aria-live="polite"></span>
       </div>
-    </div>
 
-    <!-- Tech Stack -->
-    <hr class="border-white/[0.08] mb-14">
-    <h3 class="text-[24px] font-bold tracking-[-0.015em] text-primary mb-9">Tools I've shipped revenue with</h3>
-    <div id="tech-cats" class="flex flex-col gap-7"></div>
-  </div>
-</section>
-
-<!-- ============================================================ -->
-<!--  CONTACT + FOOTER                                            -->
-<!-- ============================================================ -->
-<section id="contact" class="contact-bg py-24 md:py-16 px-12 md:px-6">
-  <div class="max-w-container mx-auto">
-
-    <div class="text-center max-w-[640px] mx-auto mb-20 md:mb-14">
-      <p class="text-[13px] font-medium text-accent tracking-[0.06em] uppercase mb-5">Get in touch</p>
-      <h2 class="text-[48px] md:text-[36px] font-bold tracking-[-0.03em] text-primary leading-tight mb-5">
-        Let's build something<br class="md:hidden"> that actually works.
-      </h2>
-      <p class="text-[18px] md:text-[16px] text-muted leading-[1.65] mb-10">
-        I'm open to senior RevOps and GTM leadership roles, advisory work with founders, and the occasional conference stage. If it involves turning revenue chaos into a repeatable system, I want to hear about it.
+      <!-- Description -->
+      <p class="hero-desc" style="margin-bottom:40px;">
+        PhD in Marketing Analytics. Nine years building GTM systems inside B2B SaaS. Most recently powering 7x revenue growth at Kibo, from $6M to $43M in ARR, by treating revenue operations as a product, not a back-office function.
       </p>
-      <div class="flex justify-center gap-4 flex-wrap">
-        <a href="mailto:ssajan.is@gmail.com"
-           class="inline-flex items-center gap-3 bg-accent text-white text-[16px] font-semibold px-7 py-4 rounded-lg btn-hover shadow-sm">
+
+      <!-- CTAs -->
+      <div style="display:flex; gap:14px; flex-wrap:wrap; margin-bottom:0;">
+        <a class="btn-primary" href="mailto:ssajan.is@gmail.com">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
           Email me
         </a>
-        <a href="https://www.linkedin.com/in/sajan-vaidhyanathan-80b47988/"
-           target="_blank" rel="noopener noreferrer"
-           class="inline-flex items-center gap-3 bg-transparent text-primary text-[16px] font-medium px-7 py-4 rounded-lg border border-white/[0.08] btn-hover">
+        <a class="btn-outline" href="#case-studies">
+          View case studies
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a class="btn-outline" href="https://www.linkedin.com/in/sajan-vaidhyanathan-80b47988/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-          Connect on LinkedIn
+          LinkedIn
         </a>
       </div>
+
+      <!-- Vercel-only stat strip -->
+      <div class="hero-stat-strip" id="hero-stat-strip"></div>
+
     </div>
-
-    <hr class="border-white/[0.08] mb-10">
-
-    <footer class="flex justify-between items-center flex-wrap gap-4">
-      <div>
-        <div class="text-[15px] font-semibold text-primary tracking-tight">Sajan Vaidhyanathan</div>
-        <div class="text-[13px] text-muted mt-1">© 2026</div>
-      </div>
-      <nav class="flex gap-6" aria-label="Footer links">
-        <a href="mailto:ssajan.is@gmail.com"
-           class="text-[13px] font-medium text-muted hover:text-primary transition-colors duration-200">Email</a>
-        <a href="https://www.linkedin.com/in/sajan-vaidhyanathan-80b47988/"
-           target="_blank" rel="noopener noreferrer"
-           class="text-[13px] font-medium text-muted hover:text-primary transition-colors duration-200">LinkedIn</a>
-      </nav>
-    </footer>
-
   </div>
 </section>
 
-<!-- ============================================================ -->
-<!--  JAVASCRIPT                                                  -->
-<!-- ============================================================ -->
+
+<!-- ============================================================
+     METRICS (Linear Dark only)
+     ============================================================ -->
+<section id="metrics">
+  <div class="container">
+    <div class="metrics-grid" id="metrics-grid"></div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     CASE STUDIES
+     ============================================================ -->
+<section id="case-studies">
+  <div class="container">
+    <span class="eyebrow">Case Studies</span>
+    <h2 class="section-title">Work that moved numbers.</h2>
+    <p class="section-sub">Eight projects. Real results. Click any row to read the full story.</p>
+    <div id="accordion" role="list"></div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     CAREER EXPERIENCE
+     ============================================================ -->
+<section id="experience">
+  <div class="container">
+    <span class="eyebrow">Experience</span>
+    <h2 class="section-title">Nine years building GTM systems.</h2>
+    <div class="timeline" id="timeline" style="margin-top:40px;"></div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     TECH STACK
+     ============================================================ -->
+<section id="tech-stack">
+  <div class="container">
+    <span class="eyebrow">Tech Stack</span>
+    <h2 class="section-title">Tools I've shipped revenue with.</h2>
+    <p class="section-sub" style="margin-bottom:40px;">41 tools across 12 categories. Everything I've run in production.</p>
+    <div id="tech-stack-grid"></div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     CERTIFICATIONS
+     ============================================================ -->
+<section id="certifications">
+  <div class="container">
+    <span class="eyebrow">Certifications</span>
+    <h2 class="section-title">20 certifications across 6 issuers.</h2>
+    <div class="cert-grid" id="cert-grid" style="margin-top:40px;"></div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     ABOUT ME
+     ============================================================ -->
+<section id="about">
+  <div class="container">
+    <span class="eyebrow">About</span>
+    <h2 class="section-title">The person behind the systems.</h2>
+
+    <div class="about-grid" style="margin-top:40px;" id="about-grid"></div>
+
+    <!-- Photo carousel -->
+    <div class="carousel" id="photo-carousel" style="margin-top:48px;" role="region" aria-label="Photo gallery"></div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     CONTACT
+     ============================================================ -->
+<section id="contact">
+  <div class="container">
+    <h2 class="contact-headline">Let's talk.</h2>
+    <p class="contact-subhead">I respond within 24 hours, usually the same day.</p>
+
+    <div class="reason-grid" id="reason-grid"></div>
+
+    <div class="channel-row" id="channel-row"></div>
+
+    <footer>
+      <div class="footer-bar">
+        <div>
+          <div class="footer-name">Sajan Vaidhyanathan</div>
+          <div class="footer-meta">Chennai, India &nbsp;&middot;&nbsp; Built with Claude Code. Hosted on GitHub Pages.</div>
+        </div>
+        <div class="footer-meta">&copy; 2026 Sajan Vaidhyanathan</div>
+      </div>
+    </footer>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SCRIPTS
+     ============================================================ -->
+<script src="content.js"></script>
 <script>
-// ── Mobile menu ──────────────────────────────────────────────
-var ham  = document.getElementById('ham');
-var menu = document.getElementById('mobile-menu');
-ham.addEventListener('click', function() {
-  menu.classList.toggle('hidden');
-  menu.classList.toggle('flex');
-});
-menu.querySelectorAll('a').forEach(function(a) {
-  a.addEventListener('click', function() {
-    menu.classList.add('hidden');
-    menu.classList.remove('flex');
-  });
+// ── Build: Hero stat strip (Vercel Minimal) ──────────────────────────────────
+var statStrip = document.getElementById('hero-stat-strip');
+HERO.inlineStats.forEach(function(s) {
+  var cell = document.createElement('div');
+  cell.className = 'stat-strip-cell';
+  cell.innerHTML =
+    '<div class="stat-strip-num">' + s.num + '</div>' +
+    '<div class="stat-strip-label">' + s.label + '</div>';
+  statStrip.appendChild(cell);
 });
 
-// ── Rotating hero word ────────────────────────────────────────
-var words   = ['Agentic GTM Systems','Pipeline Engines','Revenue Forecasts','Custom GTM Apps'];
-var wordEl  = document.getElementById('rotating-word');
-var wordIdx = 0;
-function showWord(i) {
-  wordEl.style.opacity = '0';
-  setTimeout(function() { wordEl.textContent = words[i]; wordEl.style.opacity = '1'; }, 300);
-}
-showWord(wordIdx);
-setInterval(function() { wordIdx = (wordIdx + 1) % words.length; showWord(wordIdx); }, 3000);
-
-// ── Metrics grid ──────────────────────────────────────────────
-var metrics = [
-  { prefix:'$', value:43,  suffix:'M',  label:'ARR at Kibo',          sub:'Scaled from $6M in 2 years' },
-  { prefix:'~', value:20,  suffix:'%',  label:'Pipeline sourced early', sub:'6–12 months ahead of intent' },
-  { prefix:'$', value:180, suffix:'K',  label:'Saved annually',         sub:'Vendor renegotiations across 20+ tools' },
-  { prefix:'',  value:30,  suffix:'+',  label:'Self-serve dashboards',  sub:'Tableau & Snowflake' },
-  { prefix:'',  value:3,   suffix:'M+', label:'Contacts managed',       sub:'Clean, deliverable, actionable' },
-  { prefix:'',  value:9,   suffix:'/10',label:'Email health score',     sub:'95% form-submission accuracy' },
-  { prefix:'',  value:20,  suffix:'+',  label:'Tools in stack',         sub:'End-to-end GTM infrastructure' },
-  { prefix:'~', value:15,  suffix:'%',  label:'Wasted outreach cut',    sub:'Via true LTV modeling' },
-];
+// ── Build: Metrics grid (Linear Dark) ────────────────────────────────────────
 var mgrid = document.getElementById('metrics-grid');
-metrics.forEach(function(m) {
-  var card = document.createElement('div');
-  card.className = 'metric-card p-9 sm:p-6 flex flex-col gap-2';
-  card.innerHTML =
-    '<div class="text-[42px] sm:text-[34px] font-bold tracking-[-0.03em] text-primary leading-none">' +
-      (m.prefix ? '<span class="text-[28px] text-accent">' + m.prefix + '</span>' : '') +
-      '<span class="count" data-target="' + m.value + '">0</span>' +
-      '<span class="text-[28px] sm:text-[22px] text-accent">' + m.suffix + '</span>' +
+METRICS.forEach(function(m) {
+  var raw    = m.number;
+  var numStr = raw.replace(/[^0-9.]/g,'');
+  var prefix = raw.match(/^[^0-9]*/)[0];
+  var suffix = raw.replace(/^[^0-9]*[0-9.]+/, '');
+
+  var cell = document.createElement('div');
+  cell.className = 'metric-cell';
+  cell.innerHTML =
+    '<div class="metric-num">' +
+      (prefix ? '<span style="color:var(--accent)">' + prefix + '</span>' : '') +
+      '<span data-target="' + numStr + '" data-prefix="' + prefix + '" data-suffix="' + suffix + '">' + raw + '</span>' +
     '</div>' +
-    '<div class="text-[14px] font-medium text-muted leading-snug">' + m.label + '</div>' +
-    '<div class="text-[12px] text-muted/70">' + m.sub + '</div>';
-  mgrid.appendChild(card);
+    '<div class="metric-label">' + m.label + '</div>' +
+    '<div class="metric-context">' + m.context + '</div>';
+  mgrid.appendChild(cell);
 });
 
-// ── Capabilities bento ────────────────────────────────────────
-var caps = [
-  { wide:true, tag:'Specialty',     title:'Agentic GTM Systems',       body:'I design and deploy AI-powered go-to-market engines that monitor signals, qualify intent, and surface the right opportunities at the right time — without human bottlenecks in the loop.', tools:['N8N','Make.com','Clay','HubSpot','6Sense'] },
-  { wide:false, tag:'Core',          title:'GTM Engineering',            body:'Revenue operations is engineering. I architect the data flows, integrations, and automation pipelines that keep every system in sync.',                                                     tools:['Salesforce','HubSpot','Zapier'] },
-  { wide:false, tag:'Growth',        title:'Campaign Management',        body:'Full-funnel campaign design — from email sequences and paid programs to webinars and field events — built on clean data and closed-loop reporting.',                                        tools:['Marketo','Pardot','MailChimp'] },
-  { wide:false, tag:'Infrastructure',title:'Revenue Forecasting',        body:'Built forecasting models that give leadership reliable commit numbers and early warning on risk — no more gut-feel quarterlies.',                                                             tools:['Clari','Tableau','Snowflake'] },
-  { wide:false, tag:'Intelligence',  title:'Intent & ABM',               body:'Target the right accounts before they raise their hand. I've deployed 6Sense, DemandBase, and Qualified to source pipeline 6–12 months ahead of the competition.',                         tools:['6Sense','DemandBase','Qualified'] },
-  { wide:false, tag:'Analytics',     title:'Self-Serve Dashboards',      body:'Designed 30+ dashboards so every team can answer their own questions without waiting on a report. Built on Tableau, Snowflake, Looker, and ThoughtSpot.',                                  tools:['Tableau','Looker','ThoughtSpot'] },
-  { wide:false, tag:'Custom Build',  title:'Custom GTM Applications',    body:'When off-the-shelf tools don\'t solve the problem, I build. Custom LTV calculators, lead scoring engines, intent dashboards — deployed and maintained in-house.',                           tools:[] },
-  { wide:false, tag:'Optimization',  title:'Web & SEO',                  body:'CRO testing, A/B experiments, landing page optimization, and SEO strategy — connected to revenue, not vanity metrics.',                                                                     tools:['VWO','FullStory','SEMrush'] },
-];
-var cgrid = document.getElementById('cap-grid');
-caps.forEach(function(c) {
-  var art = document.createElement('article');
-  art.className = 'bg-surface border border-white/[0.08] rounded-xl p-8 flex flex-col gap-4 card-hover' + (c.wide ? ' col-span-2 lg:col-span-2 sm:col-span-1' : '');
-  var tools = c.tools.length
-    ? '<div class="flex flex-wrap gap-2 mt-1">' + c.tools.map(function(t){ return '<span class="text-[12px] font-medium text-muted bg-s2 border border-white/[0.08] rounded-full px-3 py-1">'+t+'</span>'; }).join('') + '</div>'
-    : '';
-  art.innerHTML =
-    '<span class="self-start text-[11px] font-semibold tracking-[0.06em] uppercase text-accent bg-accent/10 border border-accent/20 rounded-full px-3 py-[3px]">'+c.tag+'</span>' +
-    '<h3 class="text-[20px] font-semibold tracking-tight text-primary leading-snug">'+c.title+'</h3>' +
-    '<p class="text-[15px] text-muted leading-[1.65]">'+c.body+'</p>' +
-    tools;
-  cgrid.appendChild(art);
-});
+// ── Build: Accordion case studies ─────────────────────────────────────────────
+var accordion = document.getElementById('accordion');
+CASE_STUDIES.forEach(function(cs) {
+  var item = document.createElement('div');
+  item.className = 'accordion-item';
+  item.setAttribute('role', 'listitem');
+  item.id = cs.id;
 
-// ── Case studies ──────────────────────────────────────────────
-var cases = [
-  { tag:'Pipeline Intelligence', num:'~20%', title:'The Invisible Pipeline Engine',    body:'I built a signal-monitoring system that watches funding rounds, leadership hires, and competitor churn — then surfaces who\'s likely to buy 6 to 12 months before they raise their hand. It now sources about 20% of our pipeline.' },
-  { tag:'Customer Economics',    num:'~15%', title:'True LTV, Real Cuts',              body:'I designed a proper LTV calculator — not napkin math — and used it to realign our ICP. The result: roughly 15% less wasted outreach on accounts that were never going to convert.' },
-  { tag:'Platform Migration',    num:'0',    title:'Marketo → HubSpot, Zero Data Loss',body:'Orchestrated a full marketing automation migration across a 3M+ contact database. Not a single record lost, not a day of pipeline disruption. Done while keeping campaigns running end to end.' },
-  { tag:'Cost Savings',          num:'$180K',title:'$180K Back in the Budget',         body:'Audited 20+ tools, found the overlap, and renegotiated contracts. Eliminated redundancies that no one had questioned in years. $180K saved annually — no functionality cut.' },
-  { tag:'Data Hygiene',          num:'9/10', title:'3 Million Contacts, One Clean System', body:'Built the data governance layer that keeps 3M+ contacts clean, scored, and deliverable. 9/10 email health score. 95% form-submission accuracy.' },
-  { tag:'Analytics',             num:'30+',  title:'30 Dashboards, Zero Waiting',      body:'Designed and shipped 30+ self-serve dashboards on Tableau and Snowflake. Teams stopped waiting for data requests and started making decisions faster.' },
-];
-var csgrid = document.getElementById('cs-grid');
-cases.forEach(function(c) {
-  var art = document.createElement('article');
-  art.className = 'bg-surface border border-white/[0.08] rounded-xl p-8 flex flex-col gap-3 card-hover';
-  art.innerHTML =
-    '<span class="self-start text-[11px] font-semibold tracking-[0.06em] uppercase text-muted bg-s2 border border-white/[0.08] rounded-full px-3 py-[3px]">'+c.tag+'</span>' +
-    '<div class="text-[36px] font-bold tracking-[-0.03em] text-accent leading-none">'+c.num+'</div>' +
-    '<h3 class="text-[18px] font-semibold tracking-tight text-primary leading-snug">'+c.title+'</h3>' +
-    '<p class="text-[14px] text-muted leading-[1.65]">'+c.body+'</p>';
-  csgrid.appendChild(art);
-});
+  var toolPills = cs.tools.map(function(t) {
+    return '<span class="pill" style="font-size:12px;">' + t + '</span>';
+  }).join('');
 
-// ── Tech stack ────────────────────────────────────────────────
-var techCats = [
-  { label:'CRM & Marketing Automation', tools:['HubSpot','Salesforce','Marketo','Pardot'] },
-  { label:'Analytics & BI',             tools:['Tableau','PowerBI','Looker','ThoughtSpot','Snowflake'] },
-  { label:'Revenue Intelligence',        tools:['Clari','Gong'] },
-  { label:'Intent & ABM',               tools:['6Sense','DemandBase','Qualified','Metadata'] },
-  { label:'Data & Enrichment',          tools:['ZoomInfo','Apollo','Clay'] },
-  { label:'Sales Engagement',           tools:['Outreach','Regie.io','Captivate IQ'] },
-  { label:'Automation',                 tools:['N8N','Zapier','Make.com'] },
-  { label:'SEO & CRO',                  tools:['SEMrush','Ahrefs','VWO','FullStory'] },
-  { label:'Email, Events & Content',    tools:['BeeFree','MailChimp','Splash','Wistia','Goldcast','Zoom'] },
-  { label:'Design & Project Mgmt',      tools:['Figma','Sketch','Jira','Asana','WordPress'] },
-];
-var techEl = document.getElementById('tech-cats');
-techCats.forEach(function(cat) {
-  var sec = document.createElement('div');
-  sec.innerHTML =
-    '<div class="text-[12px] font-semibold tracking-[0.06em] uppercase text-muted mb-3">'+cat.label+'</div>' +
-    '<div class="flex flex-wrap gap-2">' +
-      cat.tools.map(function(t){ return '<span class="pill text-[13px] font-medium text-muted bg-surface border border-white/[0.08] rounded-full px-4 py-[6px] cursor-default">'+t+'</span>'; }).join('') +
+  item.innerHTML =
+    '<button class="accordion-trigger" aria-expanded="false">' +
+      '<div style="flex:1;min-width:0;">' +
+        '<div class="accordion-meta">' +
+          '<span class="tag">' + cs.category + '</span>' +
+        '</div>' +
+        '<div class="accordion-title">' + cs.title + '</div>' +
+        '<div class="accordion-hook">' + cs.oneLineHook + '</div>' +
+      '</div>' +
+      '<svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>' +
+    '</button>' +
+    '<div class="accordion-body">' +
+      '<div class="case-grid">' +
+        '<div>' +
+          '<div class="case-section-label">The Problem</div>' +
+          '<div class="case-section-body">' + cs.sections.problem + '</div>' +
+        '</div>' +
+        '<div>' +
+          '<div class="case-section-label">The Approach</div>' +
+          '<div class="case-section-body">' + cs.sections.approach + '</div>' +
+        '</div>' +
+        '<div>' +
+          '<div class="case-section-label">How I Built It</div>' +
+          '<div class="case-section-body">' + cs.sections.howBuilt + '</div>' +
+        '</div>' +
+        '<div>' +
+          '<div class="case-section-label">Results</div>' +
+          '<div class="case-section-body">' + cs.sections.roi + '</div>' +
+        '</div>' +
+      '</div>' +
+      '<div class="case-tools">' + toolPills + '</div>' +
     '</div>';
-  techEl.appendChild(sec);
+
+  accordion.appendChild(item);
 });
 
-// ── Animated counters (IntersectionObserver) ──────────────────
-function animateCount(el) {
-  var target = parseInt(el.getAttribute('data-target'), 10);
-  var start = null;
-  var duration = 1600;
-  (function step(ts) {
-    if (!start) start = ts;
-    var p = Math.min((ts - start) / duration, 1);
-    var eased = 1 - Math.pow(1 - p, 3);
-    el.textContent = Math.floor(eased * target);
-    if (p < 1) requestAnimationFrame(step);
-    else el.textContent = target;
-  })(performance.now());
-}
-var obs = new IntersectionObserver(function(entries) {
-  entries.forEach(function(e) {
-    if (e.isIntersecting) {
-      e.target.querySelectorAll('.count').forEach(animateCount);
-      obs.unobserve(e.target);
-    }
+// ── Build: Career timeline ────────────────────────────────────────────────────
+var timeline = document.getElementById('timeline');
+CAREER.forEach(function(role) {
+  var item = document.createElement('div');
+  item.className = 'timeline-item';
+
+  var companyEl = role.companyURL
+    ? '<a href="' + role.companyURL + '" target="_blank" rel="noopener noreferrer">' + role.company + '</a>'
+    : role.company;
+
+  var chips = role.relatedCaseStudies.map(function(id) {
+    var cs = CASE_STUDIES.find(function(c) { return c.id === id; });
+    if (!cs) return '';
+    return '<span class="cs-chip" data-target-id="' + id + '" role="button" tabindex="0">' + cs.title + '</span>';
+  }).join('');
+
+  item.innerHTML =
+    '<div class="timeline-dot" aria-hidden="true"></div>' +
+    '<div class="timeline-company">' + companyEl + '</div>' +
+    '<div class="timeline-role">' + role.role + '</div>' +
+    '<div class="timeline-dates">' + role.dates + ' &nbsp;&middot;&nbsp; ' + role.location + '</div>' +
+    '<div class="timeline-summary">' + role.summary + '</div>' +
+    (chips ? '<div class="timeline-chips">' + chips + '</div>' : '');
+
+  timeline.appendChild(item);
+});
+
+// ── Build: Tech stack ─────────────────────────────────────────────────────────
+var techGrid = document.getElementById('tech-stack-grid');
+TECH_STACK.forEach(function(cat) {
+  var sec   = document.createElement('div');
+  var label = document.createElement('div');
+  label.className = 'tech-category-label';
+  label.textContent = cat.category;
+  sec.appendChild(label);
+
+  var grid = document.createElement('div');
+  grid.className = 'tech-grid';
+  cat.tools.forEach(function(t) {
+    var pill = document.createElement('span');
+    pill.className = 'pill';
+    pill.textContent = t;
+    grid.appendChild(pill);
   });
-}, { threshold: 0.2 });
-obs.observe(document.getElementById('metrics'));
+  sec.appendChild(grid);
+  techGrid.appendChild(sec);
+});
+
+// ── Build: Certifications ─────────────────────────────────────────────────────
+var certGrid = document.getElementById('cert-grid');
+CERTIFICATIONS.forEach(function(g) {
+  var card = document.createElement('div');
+  card.className = 'cert-card';
+  var items = g.certs.map(function(c) {
+    return '<div class="cert-item">' + c + '</div>';
+  }).join('');
+  card.innerHTML =
+    '<div class="cert-issuer">' + g.issuer + '</div>' +
+    '<div class="cert-list">' + items + '</div>';
+  certGrid.appendChild(card);
+});
+
+// ── Build: About sections ─────────────────────────────────────────────────────
+var aboutGrid = document.getElementById('about-grid');
+
+var opener = document.createElement('div');
+opener.className = 'about-opener';
+opener.textContent = ABOUT.opener;
+aboutGrid.appendChild(opener);
+
+ABOUT.sections.forEach(function(s) {
+  var div = document.createElement('div');
+  div.innerHTML =
+    '<div class="about-section-title">' + s.title + '</div>' +
+    '<div class="about-section-body">' + s.body + '</div>';
+  aboutGrid.appendChild(div);
+});
+
+// ── Build: Photo carousel ─────────────────────────────────────────────────────
+var carousel = document.getElementById('photo-carousel');
+ABOUT.photoCarousel.forEach(function(p) {
+  var slide = document.createElement('div');
+  slide.className = 'carousel-slide';
+
+  var img = document.createElement('img');
+  img.src     = p.src;
+  img.alt     = p.alt;
+  img.className = 'carousel-img';
+  img.setAttribute('loading', 'lazy');
+
+  // Graceful fallback if photo not yet added
+  img.onerror = function() {
+    this.style.display = 'none';
+    var placeholder = document.createElement('div');
+    placeholder.className = 'carousel-img';
+    placeholder.style.cssText = 'display:flex;align-items:center;justify-content:center;font-size:13px;opacity:0.4;';
+    placeholder.textContent = p.caption;
+    slide.insertBefore(placeholder, slide.firstChild);
+  };
+
+  var caption = document.createElement('div');
+  caption.className   = 'carousel-caption';
+  caption.textContent = p.caption;
+
+  slide.appendChild(img);
+  slide.appendChild(caption);
+  carousel.appendChild(slide);
+});
+
+// ── Build: Contact reasons ────────────────────────────────────────────────────
+var reasonGrid = document.getElementById('reason-grid');
+CONTACT.reasons.forEach(function(r) {
+  var card = document.createElement('div');
+  card.className = 'reason-card';
+  card.innerHTML =
+    '<div class="reason-title">' + r.title + '</div>' +
+    '<div class="reason-body">'  + r.body  + '</div>';
+  reasonGrid.appendChild(card);
+});
+
+// ── Build: Contact channels ───────────────────────────────────────────────────
+var channelRow = document.getElementById('channel-row');
+CONTACT.channels.forEach(function(ch, i) {
+  if (ch.href === 'PLACEHOLDER_CALENDLY_URL') return; // skip until set
+
+  var a = document.createElement('a');
+  a.href      = ch.href;
+  a.className = 'channel-btn' + (i === 0 ? ' primary-channel' : '');
+  if (!ch.href.startsWith('mailto')) { a.target = '_blank'; a.rel = 'noopener noreferrer'; }
+
+  var icons = {
+    email:    '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>',
+    linkedin: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>',
+    calendly: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>'
+  };
+
+  a.innerHTML = (icons[ch.type] || '') + ch.label;
+  channelRow.appendChild(a);
+});
 </script>
+<script src="main.js"></script>
 </body>
 </html>
