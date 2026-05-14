@@ -7,6 +7,9 @@ const SETS = [
   METRICS.slice(8, 12)
 ];
 
+const INTERVAL_MS = 3000;
+const FADE_MS = 400;
+
 function parseNumber(raw) {
   const m = raw.match(/^([^0-9]*)([0-9]+(?:\.[0-9]+)?)([^0-9]*)$/);
   if (!m) return null;
@@ -44,54 +47,28 @@ export default function MetricsCarousel() {
   const [setIdx, setSetIdx] = useState(0);
   const [opacity, setOpacity] = useState(1);
   const [counterKey, setCounterKey] = useState(0);
-  const [loops, setLoops] = useState(0);
-  const [paused, setPaused] = useState(false);
   const timerRef = useRef(null);
 
-  function scheduleNext() {
-    clearTimeout(timerRef.current);
+  useEffect(() => {
     timerRef.current = setTimeout(() => {
-      // Fade out
       setOpacity(0);
       setTimeout(() => {
-        setSetIdx(prev => {
-          const next = (prev + 1) % 3;
-          if (next === 0) setLoops(l => {
-            const newL = l + 1;
-            if (newL >= cfg.maxLoops) setPaused(true);
-            return newL;
-          });
-          return next;
-        });
+        setSetIdx(prev => (prev + 1) % 3);
         setCounterKey(k => k + 1);
-        setTimeout(() => {
-          setOpacity(1);
-        }, 50);
-      }, cfg.fadeOutMs);
-    }, cfg.setIntervalMs);
-  }
-
-  useEffect(() => {
-    if (paused) return;
-    scheduleNext();
+        setTimeout(() => setOpacity(1), 50);
+      }, FADE_MS);
+    }, INTERVAL_MS);
     return () => clearTimeout(timerRef.current);
-  }, [setIdx, paused]);
-
-  function handlePause() {
-    if (!paused) {
-      setPaused(true);
-      clearTimeout(timerRef.current);
-    }
-  }
+  }, [setIdx]);
 
   const cards = SETS[setIdx];
 
   return (
-    <section id="metrics" onMouseEnter={handlePause} onClick={handlePause} role="region" aria-label="Career metrics">
+    <section id="metrics" role="region" aria-label="Career metrics">
       <div className="container">
         <div
           className="metrics-set"
-          style={{ opacity, transition: `opacity ${cfg.fadeOutMs}ms ease` }}
+          style={{ opacity, transition: `opacity ${FADE_MS}ms ease` }}
         >
           {cards.map((m) => (
             <div key={m.label} className="metric-card">
@@ -103,9 +80,6 @@ export default function MetricsCarousel() {
             </div>
           ))}
         </div>
-        {paused && (
-          <p className="metrics-paused-note">Paused · hover to see all sets</p>
-        )}
       </div>
     </section>
   );

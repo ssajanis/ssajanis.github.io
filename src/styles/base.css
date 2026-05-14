@@ -5,7 +5,7 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: var(--font-body, 'Inter', system-ui, sans-serif);
-  font-size: 19px;
+  font-size: 23px;
   line-height: 1.65;
   background: var(--bg, #fff);
   color: var(--text, #0a0a0a);
@@ -146,19 +146,19 @@ section {
   gap: 8px;
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
   font-size: 13px;
-  font-weight: 500;
-  color: var(--text-muted);
-  background: var(--surface);
-  border: 1px solid var(--border);
+  font-weight: 600;
+  color: #fff;
+  background: #16a34a;
+  border: none;
   border-radius: 999px;
-  padding: 5px 14px;
+  padding: 6px 16px;
 }
 
 .status-dot {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--success);
+  background: rgba(255,255,255,0.8);
   flex-shrink: 0;
   animation: pulse 2s ease-in-out infinite;
 }
@@ -708,7 +708,7 @@ details > summary:hover { background: var(--surface-2); }
 
 .recs-row {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
   transition: opacity 600ms ease;
 }
@@ -991,7 +991,6 @@ hr.divider {
   .metrics-set          { grid-template-columns: repeat(2, 1fr); }
   .tech-grid            { grid-template-columns: repeat(2, 1fr); }
   .certs-grid           { grid-template-columns: repeat(2, 1fr); }
-  .recs-row             { grid-template-columns: repeat(2, 1fr); }
   .cs-sections          { grid-template-columns: 1fr; }
 }
 

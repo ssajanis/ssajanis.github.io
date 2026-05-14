@@ -3,9 +3,8 @@ import { THE_RECOMMENDATIONS } from '../content.js';
 
 const RECS  = THE_RECOMMENDATIONS.recommendations;
 const CFG   = THE_RECOMMENDATIONS;
-const PER   = CFG.cardsVisibleDesktop; // 4
+const PER   = 2;
 
-// Group recommendations into sets of 4
 const SETS = [];
 for (let i = 0; i < RECS.length; i += PER) {
   SETS.push(RECS.slice(i, i + PER));
@@ -43,7 +42,7 @@ export default function TheRecommendations() {
     clearTimeout(timerRef.current);
     timerRef.current = setTimeout(() => {
       fadeTo((setIdx + 1) % SETS.length);
-    }, CFG.rotateIntervalMs);
+    }, 5000);
   }
 
   useEffect(() => {
@@ -51,6 +50,8 @@ export default function TheRecommendations() {
     scheduleNext();
     return () => clearTimeout(timerRef.current);
   }, [setIdx, paused]);
+
+
 
   const cards = SETS[setIdx];
 
@@ -66,8 +67,6 @@ export default function TheRecommendations() {
         <div
           className="recs-row"
           style={{ opacity, transition: `opacity 400ms ease` }}
-          onMouseEnter={() => setPaused(true)}
-          onClick={() => setPaused(true)}
         >
           {cards.map((rec, i) => (
             <article key={rec.name + i} className="rec-card" style={{ animationDelay: `${i * CFG.staggerMs}ms` }}>
