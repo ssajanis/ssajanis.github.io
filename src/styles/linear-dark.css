@@ -1,65 +1,45 @@
-/* linear-dark.css — v5. Alternate theme: dark. */
+/* linear-dark.css — v8. Dark theme: warm charcoal. */
 
 html.theme-linear-dark {
-  --bg:             #08090A;
-  --surface:        #101113;
-  --surface-2:      #16181C;
-  --border:         rgba(255, 255, 255, 0.08);
-  --border-hover:   rgba(255, 255, 255, 0.16);
-  --text:           #E6E6E6;
-  --text-muted:     #8A8F98;
-  --text-soft:      #B4B9C2;
+  --bg:             #1A1612;
+  --surface:        #25201A;
+  --surface-2:      #2F2922;
+  --border:         #3D362C;
+  --border-hover:   #5A5045;
+  --border-strong:  #5A5045;
+  --text:           #F5F0E6;
+  --text-soft:      #C9C0B0;
+  --text-muted:     #8A8170;
   --accent:         #FB923C;
   --accent-soft:    #2D1B0E;
   --accent-hover:   #FDBA74;
   --success:        #4CB782;
-  --tab-bg-active:  #FB923C;
-  --tab-text-active: #0A0A0A;
+  --tab-bg-active:  #F5F0E6;
+  --tab-text-active: #1A1612;
+  --shadow:         0 1px 3px rgba(0, 0, 0, 0.4);
   --shadow-card:    0 1px 3px rgba(0, 0, 0, 0.4);
-  --radius-card:    14px;
+  --shadow-lift:    0 8px 24px rgba(0, 0, 0, 0.5);
+  --radius-card:    12px;
   --radius-btn:     8px;
   --transition:     200ms cubic-bezier(0.16, 1, 0.3, 1);
-  --container-max:  1200px;
   --font-body:      'Inter', system-ui, sans-serif;
-  --font-display:   'Inter', system-ui, sans-serif;
+  --font-display:   'Inter Tight', system-ui, sans-serif;
   --font-mono:      'JetBrains Mono', monospace;
 }
 
-/* Background grid — dark: dots */
+/* Solid warm charcoal background — no grid */
 html.theme-linear-dark body {
-  background-color: #08090A;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-  background-size: 24px 24px;
+  background-color: #1A1612;
 }
 
-html.theme-linear-dark #hero {
-  background:
-    radial-gradient(at 20% 30%, rgba(251, 146, 60, 0.12) 0%, transparent 50%),
-    radial-gradient(at 80% 70%, rgba(251, 146, 60, 0.08) 0%, transparent 50%),
-    radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    #08090A;
-  background-size: auto, auto, 24px 24px, auto;
-  -webkit-mask-image: radial-gradient(ellipse at center, black 15%, transparent 60%);
-  mask-image: radial-gradient(ellipse at center, black 15%, transparent 60%);
-}
-
-/* Linear Dark: translate on card hover */
+/* Cards lift on hover */
 html.theme-linear-dark .card:hover,
 html.theme-linear-dark .metric-card:hover,
 html.theme-linear-dark .rec-card:hover,
 html.theme-linear-dark .reason-card:hover {
-  border-color: var(--border-hover);
+  border-color: var(--border-strong);
   transform: translateY(-2px);
-}
-
-html.theme-linear-dark .hero-name {
-  font-size: 67px;
-}
-
-@media (max-width: 768px) {
-  html.theme-linear-dark .hero-name {
-    font-size: 43px;
-  }
+  box-shadow: var(--shadow-lift);
 }
 
 /* cs-category accent pill in dark */

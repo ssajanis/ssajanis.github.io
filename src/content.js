@@ -29,22 +29,22 @@ export const HERO = {
 
 export const METRICS = [
   [
-    { value: '7×',     label: 'Revenue scaled',          sublabel: '$6M to $43M ARR at Kibo' },
-    { value: '20%',    label: 'Pipeline from intent',    sublabel: 'Sourced 6 to 12 months early' },
-    { value: '$180K',  label: 'Annual vendor savings',   sublabel: 'Across 20+ tools at Kibo' },
-    { value: '3M+',    label: 'Contacts governed',       sublabel: 'Email health 9 of 10' },
+    { value: '7×',     label: 'Revenue scaled',          sub: '$6M to $43M ARR at Kibo' },
+    { value: '20%',    label: 'Pipeline from intent',    sub: 'Sourced 6 to 12 months early' },
+    { value: '$180K',  label: 'Annual vendor savings',   sub: 'Across 20+ tools at Kibo' },
+    { value: '3M+',    label: 'Contacts governed',       sub: 'Email health 9 of 10' },
   ],
   [
-    { value: '95%',    label: 'Form accuracy',           sublabel: 'Shortened intake forms' },
-    { value: '99.2%',  label: 'Email deliverability',    sublabel: 'Persona-led segmentation' },
-    { value: '95%',    label: 'Forecast accuracy',       sublabel: 'Quarter over quarter' },
-    { value: '80%+',   label: 'Quota attainment',        sublabel: 'Across the rep org' },
+    { value: '95%',    label: 'Form accuracy',           sub: 'Shortened intake forms' },
+    { value: '99.2%',  label: 'Email deliverability',    sub: 'Persona-led segmentation' },
+    { value: '95%',    label: 'Forecast accuracy',       sub: 'Quarter over quarter' },
+    { value: '80%+',   label: 'Quota attainment',        sub: 'Across the rep org' },
   ],
   [
-    { value: '30+',    label: 'Dashboards shipped',      sublabel: 'Tableau on Snowflake' },
-    { value: '$250K+', label: 'Negotiated in savings',   sublabel: 'Across career' },
-    { value: '5',      label: 'Custom GTM apps shipped', sublabel: 'Engineered at Kibo' },
-    { value: '5×',     label: 'Pipeline coverage',       sublabel: 'Maintained per quarter' },
+    { value: '30+',    label: 'Dashboards shipped',      sub: 'Tableau on Snowflake' },
+    { value: '$250K+', label: 'Negotiated in savings',   sub: 'Across career' },
+    { value: '5',      label: 'Custom GTM apps shipped', sub: 'Engineered at Kibo' },
+    { value: '5×',     label: 'Pipeline coverage',       sub: 'Maintained per quarter' },
   ],
 ];
 

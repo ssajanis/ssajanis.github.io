@@ -42,14 +42,6 @@ function AnimatedValue({ raw, run }) {
   return <>{display}</>;
 }
 
-function ArrowLeft() {
-  return <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>;
-}
-
-function ArrowRight() {
-  return <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>;
-}
-
 export default function MetricsRail() {
   const [setIdx, setSetIdx] = useState(0);
   const [opacity, setOpacity] = useState(1);
@@ -88,7 +80,11 @@ export default function MetricsRail() {
 
   return (
     <div className="metrics-rail" onMouseEnter={handleInteract}>
-      <p className="metrics-rail-eyebrow">By the numbers</p>
+      <div className="rail-header">
+        <span className="rail-label">By the numbers</span>
+        <span className="rail-rule" />
+      </div>
+
       <div
         className="metrics-rail-cards"
         style={{ opacity, transition: `opacity ${FADE_MS}ms ease` }}
@@ -99,24 +95,23 @@ export default function MetricsRail() {
               <AnimatedValue raw={m.value} run={opacity === 1} key={counterKey + m.label} />
             </div>
             <div className="metric-label">{m.label}</div>
-            <div className="metric-sublabel">{m.sublabel}</div>
+            <div className="metric-sub">{m.sub}</div>
           </div>
         ))}
       </div>
-      <div className="metrics-rail-nav">
-        <button className="arrow-btn" onClick={() => goTo((setIdx - 1 + 3) % 3)} aria-label="Previous set"><ArrowLeft /></button>
-        {[0, 1, 2].map(i => (
-          <button
-            key={i}
-            className={`rotator-dot${setIdx === i ? ' active' : ''}`}
-            onClick={() => goTo(i)}
-            aria-label={`Metric set ${i + 1}`}
-          />
-        ))}
-        <button className="arrow-btn" onClick={() => goTo((setIdx + 1) % 3)} aria-label="Next set"><ArrowRight /></button>
-        <span className={`rail-status${paused ? ' paused' : ''}`}>
-          {paused ? 'Paused · you took control' : 'Auto-rotating · 4s'}
+
+      <div className="rail-indicator">
+        <span className="rail-dots">
+          {[0, 1, 2].map(i => (
+            <button
+              key={i}
+              className={`rail-dot${setIdx === i ? ' active' : ''}`}
+              onClick={() => goTo(i)}
+              aria-label={`Metric set ${i + 1}`}
+            />
+          ))}
         </span>
+        <span>{paused ? 'Paused, you took control' : `Auto-rotating · ${INTERVAL_MS / 1000}s`}</span>
       </div>
     </div>
   );
