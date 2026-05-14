@@ -26,7 +26,7 @@ export const HERO = {
   ],
   rotateIntervalMs: 2000,
   description:
-    'PhD in Marketing. Nine years building GTM systems inside B2B SaaS. Most recently powering 7x revenue growth at Kibo, from $6M to $43M in ARR, by treating revenue operations as a product, not a back-office function.',
+    'I have over 9 years experience in building GTM systems inside B2B SaaS. Most recently powering 7x revenue growth at Kibo, from $6M to $43M in ARR, by treating revenue operations as a product, rather than a back-office function. Also I just completed my PhD in Marketing.',
   primaryCTA:   { label: 'Email me',          href: 'mailto:ssajan.is@gmail.com' },
   secondaryCTA: { label: 'View case studies', href: '#the-work' },
   linkedInURL:  'https://www.linkedin.com/in/sajan-vaidhyanathan-80b47988/',
