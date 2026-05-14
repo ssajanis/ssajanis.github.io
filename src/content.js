@@ -2,7 +2,7 @@
 
 export const HERO = {
   alignment: 'center',
-  statusPill: 'Open to RevOps leadership roles',
+  statusPill: 'Open to leadership roles in Revenue Operations, Marketing Operations, GTM Engineering, Growth',
   name: 'Sajan Vaidhyanathan',
   role: 'Revenue & Marketing Operations Leader',
   rotatingPrefix: "I'm building",
