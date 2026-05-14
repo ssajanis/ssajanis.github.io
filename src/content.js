@@ -352,7 +352,7 @@ export const CONTACT = {
   ],
   footer: {
     location:  'Chennai, India',
-    tagline:   'Built with Claude Code and React. Hosted on GitHub Pages.',
+    tagline:   'Designed, built and coded by Sajan',
     copyright: '2026 Sajan Vaidhyanathan'
   }
 };

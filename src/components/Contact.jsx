@@ -56,6 +56,7 @@ export default function Contact() {
             <span className="footer-name">{HERO.name}</span>
             <span className="caption">{c.footer.location}</span>
           </div>
+          <span className="caption">{c.footer.tagline}</span>
           <span className="caption">&copy; {c.footer.copyright}</span>
         </footer>
       </div>
