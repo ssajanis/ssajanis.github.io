@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar.jsx';
 import Hero from './components/Hero.jsx';
-import MetricsCarousel from './components/MetricsCarousel.jsx';
 import TheWork from './components/TheWork.jsx';
 import TheRecommendations from './components/TheRecommendations.jsx';
 import ThePerson from './components/ThePerson.jsx';
@@ -23,7 +22,6 @@ export default function App() {
       <Navbar theme={theme} onToggleTheme={toggleTheme} />
       <main>
         <Hero />
-        <MetricsCarousel />
         <TheWork />
         <TheRecommendations />
         <ThePerson />

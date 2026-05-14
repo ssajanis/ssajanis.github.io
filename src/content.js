@@ -28,29 +28,25 @@ export const HERO = {
 };
 
 export const METRICS = [
-  { number: '7x',     label: 'Revenue scaled',          context: '$6M to $43M ARR at Kibo' },
-  { number: '20%',    label: 'Pipeline from intent',    context: 'Sourced 6 to 12 months early' },
-  { number: '$180K',  label: 'Annual vendor savings',   context: 'Across 20+ tools at Kibo' },
-  { number: '3M+',    label: 'Contacts governed',       context: 'Email health 9 of 10' },
-  { number: '30+',    label: 'Dashboards shipped',      context: 'Tableau on Snowflake' },
-  { number: '$250K+', label: 'Negotiated in savings',   context: 'Across career' },
-  { number: '5',      label: 'Custom GTM apps shipped', context: 'Engineered at Kibo' },
-  { number: '5x',     label: 'Pipeline coverage',       context: 'Maintained per quarter' },
-  { number: '95%',    label: 'Form accuracy',           context: 'Shortened intake forms' },
-  { number: '99.2%',  label: 'Email deliverability',    context: 'Persona-led segmentation' },
-  { number: '95%',    label: 'Forecast accuracy',       context: 'Quarter over quarter' },
-  { number: '80%+',   label: 'Quota attainment',        context: 'Across the rep org' }
+  [
+    { value: '7×',     label: 'Revenue scaled',          sublabel: '$6M to $43M ARR at Kibo' },
+    { value: '20%',    label: 'Pipeline from intent',    sublabel: 'Sourced 6 to 12 months early' },
+    { value: '$180K',  label: 'Annual vendor savings',   sublabel: 'Across 20+ tools at Kibo' },
+    { value: '3M+',    label: 'Contacts governed',       sublabel: 'Email health 9 of 10' },
+  ],
+  [
+    { value: '95%',    label: 'Form accuracy',           sublabel: 'Shortened intake forms' },
+    { value: '99.2%',  label: 'Email deliverability',    sublabel: 'Persona-led segmentation' },
+    { value: '95%',    label: 'Forecast accuracy',       sublabel: 'Quarter over quarter' },
+    { value: '80%+',   label: 'Quota attainment',        sublabel: 'Across the rep org' },
+  ],
+  [
+    { value: '30+',    label: 'Dashboards shipped',      sublabel: 'Tableau on Snowflake' },
+    { value: '$250K+', label: 'Negotiated in savings',   sublabel: 'Across career' },
+    { value: '5',      label: 'Custom GTM apps shipped', sublabel: 'Engineered at Kibo' },
+    { value: '5×',     label: 'Pipeline coverage',       sublabel: 'Maintained per quarter' },
+  ],
 ];
-
-export const METRICS_CONFIG = {
-  cardsPerSet:        4,
-  cardsPerSetMobile:  2,
-  setIntervalMs:      4000,
-  fadeInMs:           600,
-  fadeOutMs:          400,
-  counterAnimationMs: 1000,
-  maxLoops:           3
-};
 
 export const THE_WORK = {
   sectionHeader: {

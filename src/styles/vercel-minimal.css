@@ -2,13 +2,13 @@
 
 :root,
 html.theme-vercel-minimal {
-  --bg:             #FFFFFF;
-  --surface:        #FAFAFA;
+  --bg:             #FAFAF9;
+  --surface:        #FFFFFF;
   --surface-2:      #F4F4F5;
   --border:         #E4E4E7;
   --border-hover:   #A1A1AA;
   --text:           #0A0A0A;
-  --text-muted:     #3F3F46;
+  --text-muted:     #52525B;
   --text-soft:      #52525B;
   --accent:         #C2410C;
   --accent-soft:    #FFEDD5;
@@ -28,7 +28,7 @@ html.theme-vercel-minimal {
 
 /* Background grid */
 html.theme-vercel-minimal body {
-  background-color: #FFFFFF;
+  background-color: #FAFAF9;
   background-image:
     linear-gradient(to right, rgba(0, 0, 0, 0.025) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(0, 0, 0, 0.025) 1px, transparent 1px);

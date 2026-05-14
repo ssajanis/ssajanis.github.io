@@ -2,7 +2,6 @@ import { HERO } from '../content.js';
 
 const links = [
   { label: 'Home',            href: '#hero' },
-  { label: 'Metrics',         href: '#metrics' },
   { label: 'Work',            href: '#the-work' },
   { label: 'Recommendations', href: '#the-recommendations' },
   { label: 'Person',          href: '#the-person' },

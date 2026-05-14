@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { HERO } from '../content.js';
+import MetricsRail from './MetricsRail.jsx';
 
 function LinkedInIcon() {
   return (
@@ -30,49 +31,57 @@ export default function Hero() {
   return (
     <section id="hero">
       <div className="container">
-        <div className="hero-inner">
-          <div className="hero-top">
-            <span className="status-pill">
-              <span className="status-dot" aria-hidden="true" />
-              {HERO.statusPill}
-            </span>
+        <div className="hero-grid">
+
+          <div className="hero-left">
+            <div className="hero-top">
+              <div className="pill">
+                <span className="pill-dot" aria-hidden="true" />
+                {HERO.statusPill}
+              </div>
+            </div>
+
+            <h1 className="hero-name">{HERO.name}.</h1>
+            <p className="hero-role">{HERO.role}</p>
+
+            <p className="hero-rotating">
+              <span className="hero-prefix">{HERO.rotatingPrefix}</span>
+              {' '}
+              <strong
+                className="hero-word"
+                style={{ opacity: visible ? 1 : 0 }}
+              >
+                {HERO.rotatingWords[wordIdx]}
+              </strong>
+            </p>
+
+            <p className="hero-desc">{HERO.description}</p>
+
+            <div className="hero-ctas">
+              <a className="btn-primary" href={HERO.primaryCTA.href}>
+                {HERO.primaryCTA.label}
+              </a>
+              <a className="btn-secondary" href={HERO.secondaryCTA.href}>
+                {HERO.secondaryCTA.label}
+              </a>
+              <a
+                className="hero-li-btn"
+                href={HERO.linkedInURL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn profile"
+              >
+                <LinkedInIcon />
+              </a>
+            </div>
+
+            <p className="hero-meta">{HERO.metaRow}</p>
           </div>
 
-          <h1 className="hero-name">{HERO.name}</h1>
-          <p className="hero-role">{HERO.role}</p>
-
-          <p className="hero-rotating">
-            <span className="hero-prefix">{HERO.rotatingPrefix}</span>
-            {' '}
-            <span
-              className="hero-word"
-              style={{ opacity: visible ? 1 : 0 }}
-            >
-              {HERO.rotatingWords[wordIdx]}
-            </span>
-          </p>
-
-          <p className="hero-desc">{HERO.description}</p>
-
-          <div className="hero-ctas">
-            <a className="btn-primary" href={HERO.primaryCTA.href}>
-              {HERO.primaryCTA.label}
-            </a>
-            <a className="btn-secondary" href={HERO.secondaryCTA.href}>
-              {HERO.secondaryCTA.label}
-            </a>
-            <a
-              className="hero-li-btn"
-              href={HERO.linkedInURL}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn profile"
-            >
-              <LinkedInIcon />
-            </a>
+          <div className="hero-right">
+            <MetricsRail />
           </div>
 
-          <p className="hero-meta">{HERO.metaRow}</p>
         </div>
       </div>
     </section>
