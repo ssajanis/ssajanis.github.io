@@ -840,70 +840,127 @@ details > summary:hover { background: var(--surface-2); }
   padding: 3px 10px;
 }
 
-/* Work Experience */
-.work-timeline { display: flex; flex-direction: column; gap: 0; }
+/* Work Experience — card grid */
+.we-container { display: flex; flex-direction: column; gap: 16px; }
 
-.job-entry {
-  padding: 28px 0;
-  border-bottom: 1px solid var(--border);
+.we-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
 }
 
-.job-entry:first-child { padding-top: 0; }
-.job-entry:last-child { border-bottom: none; }
+.we-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card, 10px);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+}
 
-.job-role {
-  font-size: 22px;
+.we-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-lift);
+  transform: translateY(-2px);
+}
+
+.we-card-active {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 1px var(--accent) !important;
+  transform: none !important;
+}
+
+.we-card-header { display: flex; flex-direction: column; gap: 6px; }
+
+.we-card-role {
+  font-family: 'Inter Tight', 'Inter', sans-serif;
+  font-size: 17px;
   font-weight: 700;
   color: var(--text);
   letter-spacing: -0.02em;
-  line-height: 1.2;
+  line-height: 1.25;
+}
+
+.we-card-meta {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.we-company-link {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+.we-company-link:hover { text-decoration: underline; }
+
+.we-card-dates { color: var(--text-muted); }
+
+.we-card-summary {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.we-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.we-tag {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 2px 10px;
+  white-space: nowrap;
+}
+
+/* Expanded panel — shared .cs-expanded-panel, .cs-expanded-header, .cs-close-btn */
+.we-panel-meta {
+  font-size: 13px;
+  color: var(--text-muted);
   margin-bottom: 4px;
 }
 
-.job-company {
-  font-size: 15px;
-  color: var(--text-muted);
+.we-panel-sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.we-panel-col { display: flex; flex-direction: column; gap: 4px; }
+
+.we-panel-heading {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 13px;
   font-weight: 500;
-  margin-bottom: 12px;
-}
-
-.job-company a {
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.job-company a:hover { text-decoration: underline; }
-
-.job-summary {
-  font-size: 19px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   color: var(--text-muted);
-  line-height: 1.7;
   margin-bottom: 12px;
 }
 
-.job-details > summary {
-  font-size: 14px;
-  font-weight: 600;
-  padding: 14px 20px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
+.we-detail-list { display: flex; flex-direction: column; gap: 12px; }
 
-.detail-item {
+.we-detail-item {
   font-size: 15px;
   color: var(--text-muted);
   line-height: 1.7;
-  margin-bottom: 12px;
-  padding-left: 4px;
 }
 
-.detail-item:last-child { margin-bottom: 0; }
-
-.detail-item strong {
+.we-detail-item strong {
   color: var(--text);
   font-weight: 600;
+  display: block;
+  margin-bottom: 2px;
 }
 
 /* Tech Stack */
@@ -1238,6 +1295,10 @@ hr.divider {
   .contact-layout       { grid-template-columns: 1fr; gap: 40px; }
 }
 
+@media (max-width: 860px) {
+  .we-panel-sections    { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 768px) {
   body                  { font-size: 17px; }
   .container            { padding: 0 1.5rem; }
@@ -1270,6 +1331,7 @@ hr.divider {
   .metrics-set          { grid-template-columns: 1fr; }
   .metrics-rail-cards   { grid-template-columns: 1fr; }
   .cs-grid              { grid-template-columns: 1fr; }
+  .we-grid              { grid-template-columns: 1fr; }
   .cs-sections          { grid-template-columns: 1fr; }
   .cs-expanded-panel    { padding: 20px; }
   .tab-bar              { flex-direction: column; }
