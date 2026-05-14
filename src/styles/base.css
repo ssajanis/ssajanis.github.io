@@ -221,6 +221,12 @@ section {
   50%       { opacity: 0.55; }
 }
 
+.pill-role {
+  font-weight: 600;
+  color: var(--accent);
+  display: inline-block;
+}
+
 /* ── Buttons ───────────────────────────────────────────────────────────────── */
 
 .btn-primary {

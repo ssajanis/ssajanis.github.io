@@ -15,7 +15,10 @@ function LinkedInIcon() {
 export default function Hero() {
   const [wordIdx, setWordIdx] = useState(0);
   const [visible, setVisible] = useState(true);
+  const [roleIdx, setRoleIdx] = useState(0);
+  const [roleVisible, setRoleVisible] = useState(true);
   const timerRef = useRef(null);
+  const roleTimerRef = useRef(null);
 
   useEffect(() => {
     timerRef.current = setInterval(() => {
@@ -28,6 +31,17 @@ export default function Hero() {
     return () => clearInterval(timerRef.current);
   }, []);
 
+  useEffect(() => {
+    roleTimerRef.current = setInterval(() => {
+      setRoleVisible(false);
+      setTimeout(() => {
+        setRoleIdx(i => (i + 1) % HERO.statusPillRoles.length);
+        setRoleVisible(true);
+      }, 220);
+    }, 2000);
+    return () => clearInterval(roleTimerRef.current);
+  }, []);
+
   return (
     <section id="hero" className="hero">
 
@@ -35,7 +49,13 @@ export default function Hero() {
         <div className="hero-top">
           <div className="pill">
             <span className="pill-dot" aria-hidden="true" />
-            {HERO.statusPill}
+            {HERO.statusPill}{' '}
+            <span
+              className="pill-role"
+              style={{ opacity: roleVisible ? 1 : 0, transition: 'opacity 220ms ease' }}
+            >
+              {HERO.statusPillRoles[roleIdx]}
+            </span>
           </div>
         </div>
 
