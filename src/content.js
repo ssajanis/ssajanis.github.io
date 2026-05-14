@@ -35,7 +35,7 @@ export const METRICS = [
     { value: '3M+',    label: 'Contacts governed',       sub: 'Email health 9 of 10' },
   ],
   [
-    { value: '95%',    label: 'Form accuracy',           sub: 'Shortened intake forms' },
+    { value: '98%',    label: 'Form accuracy',           sub: 'Shortened intake forms' },
     { value: '99.2%',  label: 'Email deliverability',    sub: 'Persona-led segmentation' },
     { value: '95%',    label: 'Forecast accuracy',       sub: 'Quarter over quarter' },
     { value: '80%+',   label: 'Quota attainment',        sub: 'Across the rep org' },
@@ -43,7 +43,7 @@ export const METRICS = [
   [
     { value: '30+',    label: 'Dashboards shipped',      sub: 'Tableau on Snowflake' },
     { value: '$250K+', label: 'Negotiated in savings',   sub: 'Across career' },
-    { value: '5',      label: 'Custom GTM apps shipped', sub: 'Engineered at Kibo' },
+    { value: '10+',    label: 'Custom GTM apps shipped', sub: 'Engineered at Kibo' },
     { value: '5×',     label: 'Pipeline coverage',       sub: 'Maintained per quarter' },
   ],
 ];
