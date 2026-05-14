@@ -46,7 +46,6 @@ export default function MetricsRail() {
   const [setIdx, setSetIdx] = useState(0);
   const [opacity, setOpacity] = useState(1);
   const [counterKey, setCounterKey] = useState(0);
-  const [paused, setPaused] = useState(false);
   const timerRef = useRef(null);
 
   function fadeTo(idx) {
@@ -59,27 +58,14 @@ export default function MetricsRail() {
   }
 
   useEffect(() => {
-    if (paused) return;
     timerRef.current = setTimeout(() => fadeTo((setIdx + 1) % 3), INTERVAL_MS);
     return () => clearTimeout(timerRef.current);
-  }, [setIdx, paused]);
-
-  function handleInteract() {
-    if (!paused) {
-      setPaused(true);
-      clearTimeout(timerRef.current);
-    }
-  }
-
-  function goTo(idx) {
-    handleInteract();
-    fadeTo(idx);
-  }
+  }, [setIdx]);
 
   const cards = METRICS[setIdx];
 
   return (
-    <div className="metrics-rail" onMouseEnter={handleInteract}>
+    <div className="metrics-rail">
       <div className="rail-header">
         <span className="rail-label">By the numbers</span>
         <span className="rail-rule" />
@@ -98,20 +84,6 @@ export default function MetricsRail() {
             <div className="metric-sub">{m.sub}</div>
           </div>
         ))}
-      </div>
-
-      <div className="rail-indicator">
-        <span className="rail-dots">
-          {[0, 1, 2].map(i => (
-            <button
-              key={i}
-              className={`rail-dot${setIdx === i ? ' active' : ''}`}
-              onClick={() => goTo(i)}
-              aria-label={`Metric set ${i + 1}`}
-            />
-          ))}
-        </span>
-        <span>{paused ? 'Paused, you took control' : `Auto-rotating · ${INTERVAL_MS / 1000}s`}</span>
       </div>
     </div>
   );
