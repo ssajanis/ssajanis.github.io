@@ -24,7 +24,7 @@ h1, h2, h3,
 /* ── Background Grid (HARD RULE — applied by theme CSS) ─────────────────── */
 
 .container {
-  padding: 0 4rem;
+  padding: 0 6rem;
 }
 
 section {
@@ -125,7 +125,7 @@ section {
 .mobile-menu-link:active { color: var(--text); background: var(--surface-2); }
 
 .navbar-inner {
-  padding: 0 4rem;
+  padding: 0 6rem;
   height: 56px;
   display: flex;
   align-items: center;
@@ -431,7 +431,7 @@ details > summary:hover { background: var(--surface-2); }
 /* ── Hero ──────────────────────────────────────────────────────────────────── */
 
 .hero {
-  padding: 4.5rem 4rem 4rem;
+  padding: 4.5rem 6rem 4rem;
   display: grid;
   grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
   gap: 5rem;
