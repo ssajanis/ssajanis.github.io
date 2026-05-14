@@ -674,50 +674,130 @@ details > summary:hover { background: var(--surface-2); }
 .work-header { margin-bottom: 8px; }
 .work-title-row { margin-bottom: 24px; }
 
-/* Case Studies */
-.cs-summary-inner {
-  display: flex;
-  align-items: baseline;
+/* Case Studies — card grid */
+.cs-container { display: flex; flex-direction: column; gap: 16px; }
+
+.cs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 12px;
-  flex: 1;
-  min-width: 0;
-  flex-wrap: wrap;
+}
+
+.cs-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card, 10px);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+}
+
+.cs-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-lift);
+  transform: translateY(-2px);
+}
+
+.cs-card-active {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 1px var(--accent) !important;
+  transform: none !important;
 }
 
 .cs-category {
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 500;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--accent);
-  background: var(--surface-2);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 2px 10px;
-  white-space: nowrap;
-  flex-shrink: 0;
+  align-self: flex-start;
 }
 
-.cs-title-text {
-  font-size: 16px;
+.cs-card-title {
+  font-size: 15px;
   font-weight: 600;
   color: var(--text);
-  flex-shrink: 0;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
 }
 
-.cs-hook {
-  font-size: 15px;
+.cs-card-hook {
+  font-size: 13px;
   color: var(--text-muted);
-  font-weight: 400;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  line-height: 1.55;
   flex: 1;
-  min-width: 0;
 }
 
-.cs-body { display: flex; flex-direction: column; gap: 20px; }
+.cs-read-more-btn {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition);
+  align-self: flex-start;
+}
+.cs-read-more-btn:hover { color: var(--accent-hover); }
+
+/* Expanded panel */
+.cs-expanded-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card, 10px);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  animation: csExpand 180ms ease;
+}
+
+@keyframes csExpand {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.cs-expanded-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.cs-expanded-meta { display: flex; flex-direction: column; gap: 6px; }
+
+.cs-expanded-title {
+  font-family: 'Inter Tight', 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.cs-close-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: border-color var(--transition), color var(--transition);
+}
+.cs-close-btn:hover { border-color: var(--border-hover); color: var(--text); }
 
 .cs-sections {
   display: grid;
@@ -1144,6 +1224,7 @@ hr.divider {
   .metrics-set          { grid-template-columns: repeat(2, 1fr); }
   .tech-grid            { grid-template-columns: repeat(2, 1fr); }
   .certs-grid           { grid-template-columns: repeat(2, 1fr); }
+  .cs-grid              { grid-template-columns: repeat(2, 1fr); }
   .cs-sections          { grid-template-columns: 1fr; }
 }
 
@@ -1182,6 +1263,9 @@ hr.divider {
   .hero                 { padding: 2rem 1.25rem 2rem; }
   .metrics-set          { grid-template-columns: 1fr; }
   .metrics-rail-cards   { grid-template-columns: 1fr; }
+  .cs-grid              { grid-template-columns: 1fr; }
+  .cs-sections          { grid-template-columns: 1fr; }
+  .cs-expanded-panel    { padding: 20px; }
   .tab-bar              { flex-direction: column; }
   .tab-btn              { width: 100%; justify-content: space-between; }
 }
