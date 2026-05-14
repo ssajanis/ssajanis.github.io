@@ -77,7 +77,52 @@ section {
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  /* needed for absolute-positioned mobile menu */
+  isolation: isolate;
 }
+
+.hamburger-btn {
+  display: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: border-color var(--transition), color var(--transition);
+}
+.hamburger-btn:hover { border-color: var(--border-hover); color: var(--text); }
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 8px 1.5rem 16px;
+  flex-direction: column;
+  gap: 2px;
+  z-index: 99;
+}
+.mobile-menu.open { display: flex; }
+
+.mobile-menu-link {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: var(--radius-btn, 6px);
+  transition: color var(--transition), background var(--transition);
+}
+.mobile-menu-link:hover,
+.mobile-menu-link:active { color: var(--text); background: var(--surface-2); }
 
 .navbar-inner {
   padding: 0 4rem;
@@ -1107,21 +1152,36 @@ hr.divider {
 }
 
 @media (max-width: 768px) {
+  body                  { font-size: 17px; }
   .container            { padding: 0 1.5rem; }
   .navbar-inner         { padding: 0 1.5rem; }
   section               { padding: 64px 0; }
+  .section-title        { font-size: 28px; }
+  .section-sub          { font-size: 17px; max-width: 100%; }
+  .bio                  { font-size: 1rem; }
+  .hero-rotating        { font-size: 17px; }
   .recs-row             { grid-template-columns: 1fr; }
   .tech-grid            { grid-template-columns: 1fr; }
   .certs-grid           { grid-template-columns: 1fr; }
   .contact-headline     { font-size: 35px; }
   .navbar-links         { display: none; }
+  .hamburger-btn        { display: flex; }
   .site-footer          { flex-direction: column; align-items: flex-start; gap: 8px; }
   .cs-hook              { display: none; }
   .person-now-row       { grid-template-columns: 1fr; gap: 4px; }
+  .person-card          { padding: 24px; }
+  .rec-card             { padding: 20px; }
+  .tech-category        { padding: 16px; }
+  .cert-group           { padding: 20px; }
 }
 
 @media (max-width: 480px) {
+  .container            { padding: 0 1.25rem; }
+  .navbar-inner         { padding: 0 1.25rem; }
+  section               { padding: 48px 0; }
+  .hero                 { padding: 2rem 1.25rem 2rem; }
   .metrics-set          { grid-template-columns: 1fr; }
+  .metrics-rail-cards   { grid-template-columns: 1fr; }
   .tab-bar              { flex-direction: column; }
   .tab-btn              { width: 100%; justify-content: space-between; }
 }

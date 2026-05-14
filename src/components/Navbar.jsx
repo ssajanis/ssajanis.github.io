@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { HERO } from '../content.js';
 
 const links = [
@@ -26,8 +27,22 @@ function SunIcon() {
   );
 }
 
+function HamburgerIcon({ open }) {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      {open
+        ? <><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></>
+        : <><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></>
+      }
+    </svg>
+  );
+}
+
 export default function Navbar({ theme, onToggleTheme }) {
   const isDark = theme === 'linear-dark';
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  function closeMenu() { setMenuOpen(false); }
 
   return (
     <nav className="navbar" role="navigation" aria-label="Main navigation">
@@ -38,13 +53,37 @@ export default function Navbar({ theme, onToggleTheme }) {
             <a key={l.href} className="navbar-link" href={l.href} role="listitem">{l.label}</a>
           ))}
         </div>
-        <button
-          className="theme-btn"
-          onClick={onToggleTheme}
-          aria-label={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
-        >
-          {isDark ? <SunIcon /> : <MoonIcon />}
-        </button>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <button
+            className="theme-btn"
+            onClick={onToggleTheme}
+            aria-label={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
+          >
+            {isDark ? <SunIcon /> : <MoonIcon />}
+          </button>
+          <button
+            className="hamburger-btn"
+            onClick={() => setMenuOpen(o => !o)}
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={menuOpen}
+          >
+            <HamburgerIcon open={menuOpen} />
+          </button>
+        </div>
+      </div>
+
+      <div className={`mobile-menu${menuOpen ? ' open' : ''}`} role="list">
+        {links.map(l => (
+          <a
+            key={l.href}
+            className="mobile-menu-link"
+            href={l.href}
+            role="listitem"
+            onClick={closeMenu}
+          >
+            {l.label}
+          </a>
+        ))}
       </div>
     </nav>
   );
