@@ -10,7 +10,9 @@ html.theme-vercel-minimal {
   --text:           #0A0A0A;
   --text-muted:     #3F3F46;
   --text-soft:      #52525B;
-  --accent:         #0A0A0A;
+  --accent:         #C2410C;
+  --accent-soft:    #FFEDD5;
+  --accent-hover:   #9A3412;
   --success:        #10B981;
   --tab-bg-active:  #0A0A0A;
   --tab-text-active: #FFFFFF;
