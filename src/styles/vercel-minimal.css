@@ -8,9 +8,9 @@ html.theme-vercel-minimal {
   --border:         #DDD6C5;
   --border-hover:   #B8AE9A;
   --border-strong:  #B8AE9A;
-  --text:           #1A1612;
-  --text-soft:      #4A4339;
-  --text-muted:     #7C7464;
+  --text:           #0A0A0A;
+  --text-soft:      #1C1C1C;
+  --text-muted:     #4A4339;
   --accent:         #C2410C;
   --accent-soft:    #FFEDD5;
   --accent-hover:   #9A3412;
