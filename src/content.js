@@ -337,7 +337,7 @@ export const CERTIFICATIONS = {
     { issuer: 'Google',            certs: ['Google Analytics 4', 'Google Ads Search', 'Google Digital Garage', 'Antigravity'] },
     { issuer: 'HubSpot',           certs: ['Super Admin & Marketing Automation', 'Revenue Operations & CRM', 'Email & Inbound Marketing', 'Digital Advertising & Marketing', 'SEO & Marketing Automation'] },
     { issuer: 'LinkedIn Learning', certs: ['Project Management (PMP)', 'Marketing Analytics', 'Design Thinking'] },
-    { issuer: 'Udemy',             certs: ['Agile Project Management', 'Account Based Marketing', 'Complete Digital Marketing Course', 'Tableau & Power BI', 'Python, SQL, HTML, CSS for Marketers', 'Chat GPT for Marketers'] },
+    { issuer: 'Udemy',             certs: ['Agile Project Management', 'Account Based Marketing', 'Complete Digital Marketing Course', 'Tableau & Power BI', 'Python, SQL, HTML, CSS for Marketers', 'Chat GPT for Marketers', 'Claude Complete', 'LangChain Complete'] },
     { issuer: 'SEMrush',           certs: ['AI Powered Marketer'] },
     { issuer: 'Trailhead',         certs: ['Salesforce'] }
   ]
