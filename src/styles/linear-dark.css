@@ -39,8 +39,8 @@ html.theme-linear-dark #hero {
     radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
     #08090A;
   background-size: auto, auto, 24px 24px, auto;
-  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
-  mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 15%, transparent 60%);
+  mask-image: radial-gradient(ellipse at center, black 15%, transparent 60%);
 }
 
 /* Linear Dark: translate on card hover */

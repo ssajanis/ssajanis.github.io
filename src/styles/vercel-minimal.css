@@ -40,8 +40,8 @@ html.theme-vercel-minimal #hero {
     linear-gradient(to right, rgba(0, 0, 0, 0.025) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(0, 0, 0, 0.025) 1px, transparent 1px);
   background-size: 64px 64px;
-  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
-  mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 15%, transparent 55%);
+  mask-image: radial-gradient(ellipse at center, black 15%, transparent 55%);
 }
 
 /* Vercel Minimal: no translate on card hover */
