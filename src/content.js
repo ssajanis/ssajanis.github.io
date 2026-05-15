@@ -123,7 +123,7 @@ export const CASE_STUDIES = [
   },
   {
     id: 'customer-economics-engine',
-    category: 'Systems & Analytics',
+    category: 'Systems',
     title: 'Customer Economics Engine',
     oneLineHook: 'True LTV calculator that reallocated paid spend toward profitable segments.',
     sections: {
@@ -136,7 +136,7 @@ export const CASE_STUDIES = [
   },
   {
     id: 'marketo-to-hubspot-migration',
-    category: 'Systems & Analytics',
+    category: 'Systems',
     title: 'Marketo to HubSpot Migration',
     oneLineHook: 'Migrating 3M+ contacts with zero data loss and zero days of campaign downtime.',
     sections: {
@@ -149,7 +149,7 @@ export const CASE_STUDIES = [
   },
   {
     id: 'tableau-snowflake-infrastructure',
-    category: 'Systems & Analytics',
+    category: 'Analytics',
     title: 'Tableau + Snowflake Analytics Infrastructure',
     oneLineHook: '30+ self-serve dashboards that ended every meeting\'s number-reconciliation argument.',
     sections: {
@@ -162,7 +162,7 @@ export const CASE_STUDIES = [
   },
   {
     id: 'vendor-consolidation',
-    category: 'Systems & Analytics',
+    category: 'Strategic Management',
     title: 'Vendor Consolidation Program',
     oneLineHook: '$180K saved annually, self-funding two of the agentic AI projects.',
     sections: {
