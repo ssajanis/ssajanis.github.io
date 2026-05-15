@@ -58,7 +58,7 @@ export const THE_WORK = {
   sectionHeader: {
     eyebrow:  'The Work',
     title:    'Work that moved numbers.',
-    subhead:  'Eight projects, four roles, forty-four tools. Three views of the same career.'
+    subhead:  'Recent Eight projects, Three roles, Forty-Four tools owned. Three different views of the same career.'
   },
   rotateIntervalMs: 5000,
   tabs: [
