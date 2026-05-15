@@ -299,11 +299,11 @@ export const THE_RECOMMENDATIONS = {
 
 export const PERSON_STORY = {
   eyebrowLabel: 'The Story',
-  leadLine: 'Chennai is where I\'m from, where I work, and where I keep coming back to.',
+  leadLine: 'Early mornings I\'m a sports person and fitness enthusiast.',
   paragraphs: [
-    'By day I run Revenue and Marketing Operations at Kibo. By night I build things nobody asked for. I just finished a PhD in Marketing on the side.',
-    'My doctorate at SRM University looked at how personalized advertising shapes purchase intent. I\'m interested in the line where personalization stops being helpful and starts being intrusive. Most marketers ignore that line. The research argues you can\'t afford to.',
-    'I lecture at India\'s top B-schools, advise founders informally on when they need to hire a person and when they need to build a system, and read across three shelves: business and marketing for the day job, history when I want to think slowly, and the occasional novel when I need to remember not everything is a problem to solve.'
+    'By day I run Revenue and Marketing Operations at Kibo. By night I build things nobody asked for.',
+    'I just wrapped a PhD in Marketing. My doctorate at SRM University looked at how personalized advertising shapes purchase intent. Why did I do it? Because I worked for nearly a decade and I found B2B companies don\'t effectively use personalization and I wanted to understand how personalization on ads can be used to drive pipeline. The research states you can succeed at it by achieving the right steps.',
+    'I speak at B2B events, communities, lecture at India\'s top B-schools. I advise founding teams formally on when they need to hire a person and when they need to build a system, and read across three shelves: business and marketing for the day job, history when I want to think slowly, and the occasional novel when I need to remember not everything is a problem to solve.'
   ]
 };
 
