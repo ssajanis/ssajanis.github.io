@@ -322,7 +322,7 @@ export const PERSON_ADVISE = {
   leadLine: 'Most early-stage GTM tech stacks aren\'t broken. They were never built.',
   paragraphs: [
     'I work with founders to design the architecture layer before the first sales hire compounds the wrong patterns. The shape of the stack at month 6 determines the velocity of the company at month 36.',
-    'Most engagements run 4 to 8 weeks, focused on one specific layer: forecasting, attribution, tech stack rationalization, or AI agent design. Past work includes Everstage, where I built the marketing operations foundation from scratch.'
+    'Most engagements run 12 to 52 weeks, focused on one specific layer: forecasting, attribution, tech stack rationalization, or AI agent design. Past work includes Everstage, where I built the marketing operations foundation from scratch.'
   ],
   availability: { state: 'waitlist', label: 'Currently on waitlist · Q4 openings' }
 };
